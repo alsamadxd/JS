@@ -31,3 +31,28 @@ true;
 if (15 > 10) {
   const a = "15 is greater than 10";
 }
+
+/*______________Falsy Value_________________
+
+    When we convert these values to boolean gives false.
+
+    1- 0  (zero)
+    2- "" (empty sting)
+    3- undefined 
+    4- Null
+    5- NaN (Not a Number)
+    
+*/
+
+/*_____________Equality Operator_____________
+
+    1- == : It is used to check if two values are equal or 
+            not. It performs Type Coersion.
+          
+    2- === : Strict equality operator, checks 2 values are
+             equal or not, it does not perform Type Coersion.
+
+    3- != : Loose inequality, performs Type Coersion.
+
+    4- !== : Strict inequality, does not perform Type Coersion.
+*/
