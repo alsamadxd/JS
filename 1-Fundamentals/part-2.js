@@ -13,6 +13,14 @@
 */
 
 /*
+    Transpiling Or Polyfilling => It is a process used to convert ES6 code to ES5.
+                                  It is done only when the app is developed, so 
+                                  that the user who are using the old browser can 
+                                  use that app.
+
+*/
+
+/*
 
     First-class Function => function are treated as varibles, we can pass them into
                             other funtion, and return them from function.
@@ -32,7 +40,7 @@ if (15 > 10) {
   const a = "15 is greater than 10";
 }
 
-/*______________Falsy Value_________________
+/*_______________Falsy Value___________________
 
     When we convert these values to boolean gives false.
 
@@ -44,7 +52,7 @@ if (15 > 10) {
     
 */
 
-/*_____________Equality Operator_____________
+/*______________Equality Operator_______________
 
     1- == : It is used to check if two values are equal or 
             not. It performs Type Coersion.
@@ -56,3 +64,28 @@ if (15 > 10) {
 
     4- !== : Strict inequality, does not perform Type Coersion.
 */
+
+/*
+________Codition using Ternary Operator________
+
+    Conditon ? True Value : False Value
+
+    when the coditio is true then it will return true value
+    else false value.
+*/
+const age = 15;
+age > 18 ? console.log("You can Vote") : console.log("You are a minor");
+
+// For Loop
+
+for (let i = 1; i <= 5; i++) {
+  console.log(`Hello ${i}`);
+}
+
+// While Loop
+
+let x = 5;
+while (x > 0) {
+  console.log(x);
+  x--;
+}
