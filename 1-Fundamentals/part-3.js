@@ -9,6 +9,7 @@ _______________________FUNCTION___________________________
     function functionName(){
         //body
     }
+    
 */
 
 // 1- Funtion DECLARATION
