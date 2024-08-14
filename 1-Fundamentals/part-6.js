@@ -38,4 +38,16 @@ function second() {
 /*
 __________________Inside Execution Context_______________________
         
+
+  1- Variable Environment 
+        #- Let, const and var declaration 
+        #- function 
+        #- arguments object => Contain all the arguments that were passed into the function,
+            that the current execution context belongs to.
+
+  2- Scope Chain => Consists of references to variable that are located outside of the current
+                    function. To keep track of scope chain, it is stored in each execution
+                    context.
+                
+  3- this keyword => Each context gets it.
 */
