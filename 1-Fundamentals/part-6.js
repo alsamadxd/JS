@@ -129,3 +129,14 @@ function third() {
     The third function has to its own variable and the global variable ONLY.
     
 */
+
+/* 
+_________________________Hoisting____________________________
+
+  #- Make some types of variable accessible/usable in the code before they are actually
+     declared.
+  
+  #- Before execution, code is scanned for variable declaration and for each variable, 
+     a new property is created in the variable environment object. (i.e. at the creation
+    phase of the execution context)
+*/
