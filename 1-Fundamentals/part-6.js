@@ -50,4 +50,82 @@ __________________Inside Execution Context_______________________
                     context.
                 
   3- this keyword => Each context gets it.
+
+  #- Execution Context belonging to the arrow function do not get their own arguments keyword
+        nor do they get the "this" keyword i.e. arrow function do not have the "arguments
+        object" and the 'this' keyword, insted they use the argument object, and this keyword
+        from their colsest regular function parent.
+
+*/
+
+/*
+_______________________Scoping and Scope____________________________
+
+
+  Scoping => How our program's variable are organised and accessed."where can we access a
+            certain variable, and where not?".
+
+  Lexical Scoping => Scoping is controlled by placement of function and blocks in the code.
+                    e.g. A function that is written inside another function has access to 
+                    the variable of parent function.
+
+  Scope => Space or environment in which a certain variable is declared (variable environment
+            in case of functions).
+
+  Scope of a variable => Region of our code where a certain variable can be accessed.
+
+  SCOPE CHAIN => Order in which function are written in code has NOTHING to do with order
+                 in which they (function) were called.
+
+*/
+
+/* 
+_________________________Global Scope____________________________
+
+    Outside of any function or block.
+    Variable declared in global scope are accessible everwhere.
+*/
+const global = "Global variable";
+
+/* 
+_________________________Function Scope____________________________
+
+    Variable are accessible only inside function, NOT OUTSIDE.
+    Also called local scope.
+*/
+function fun() {
+  const now = "2024"; // Function scope variable
+  return `Its ${now}`;
+}
+
+/* 
+_________________________Block Scope (ES6)____________________________
+
+    Variable are accessible only inside Block.
+    This only applies to let and const variable ONLY.
+    Function are also block scoped (only in strict mode).
+    Variable declared with VAR end up in the closest function scope.
+*/
+
+//    Every scope has access to variable from all outer scopes. Vice-versa NOT ALLOWED.
+
+const a = "Jon";
+first();
+function first() {
+  const b = "hello";
+  second();
+  function second() {
+    const c = "hi";
+    third();
+  }
+}
+function third() {
+  const c = "hey";
+  console.log(d + c + b + a);
+}
+/*
+    It will give ReferenceError because function third() does not has access to variable
+    decalred in second() and first() function, due to scope chain. 
+    The third function has to its own variable and the global variable ONLY.
+    
 */
