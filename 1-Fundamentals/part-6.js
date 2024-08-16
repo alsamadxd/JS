@@ -138,5 +138,26 @@ _________________________Hoisting____________________________
   
   #- Before execution, code is scanned for variable declaration and for each variable, 
      a new property is created in the variable environment object. (i.e. at the creation
-    phase of the execution context)
+    phase of the execution context).
+
+
+                                ____HOISETED____        ____INITIAL VALUE____      ___SCOPE___
+
+    function declaration            YES                 Actual Function          BLOCK in strict mode 
+                                                                                 otherwise fuction
+
+    var variable                    YES                  UNDEFINED               FUNCTION
+
+    let and const variable        NO, technically     <uninitialized> TDZ         BLOCK
+                                  yes BUT not in 
+                                  practice.
+
+    function expression         DEPENDS IF USING VAR OR LET/CONST, BEHAVES IN SAME WAY AS THESE VARIABLE
+    and arrows
+
+
+  #- Variable declared with let or const and function expression or arrows with let or const cannot be
+     used BEFORE declaration because of TEMORAL DEAD ZONE (TDZ).
+
+  #- The movement of function and variable of global scope at the top of the file is known as HOISTING.
 */
