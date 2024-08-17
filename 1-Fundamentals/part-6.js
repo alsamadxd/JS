@@ -21,16 +21,16 @@
 */
 
 const naMe = "Jay"; // top level code (i.e. not inside any function)
-const first = () => {
-  // const first() is top level code (i.e. not inside any function)
+const firsst = () => {
+  // const firsst() is top level code (i.e. not inside any function)
   let a = 1;
-  const b = second();
+  const b = ssecond();
   a += b;
   return a;
 };
 // function body executed only when called.
-function second() {
-  // function second() is top level code (i.e. not inside any function)
+function ssecond() {
+  // function ssecond() is top level code (i.e. not inside any function)
   var c = 23;
   return c;
 }
@@ -121,12 +121,12 @@ function first() {
 }
 function third() {
   const c = "hey";
-  console.log(d + c + b + a);
+  // console.log(d + c + b + a);
 }
 /*
     It will give ReferenceError because function third() does not has access to variable
     decalred in second() and first() function, due to scope chain. 
-    The third function has to its own variable and the global variable ONLY.
+    The third function has access to its own variable and the global variable ONLY.
     
 */
 
@@ -161,3 +161,12 @@ _________________________Hoisting____________________________
 
   #- The movement of function and variable of global scope at the top of the file is known as HOISTING.
 */
+
+const namee = "bob";
+if (namee === "bob") {
+  //console.log(`Bob is ${job}`); ReferenceError: cannot access 'job' before initialization.
+  const age = 30;
+  console.log(age);
+  const job = "Teacher"; // code before this line is TDZ for job variable
+  //console.log(x); ReferenceError: x is not defined.
+}
