@@ -162,6 +162,10 @@ _________________________Hoisting____________________________
   #- The movement of function and variable of global scope at the top of the file is known as HOISTING.
 */
 
+/*
+___________________________TEMORAL DEAD ZONE (TDZ)_____________________________
+
+*/
 const namee = "bob";
 if (namee === "bob") {
   //console.log(`Bob is ${job}`); ReferenceError: cannot access 'job' before initialization.
@@ -170,3 +174,22 @@ if (namee === "bob") {
   const job = "Teacher"; // code before this line is TDZ for job variable
   //console.log(x); ReferenceError: x is not defined.
 }
+
+/* 
+_______________________WHY TDZ?_____________________________
+
+  Makes it easier to avoid and catch errors, accessing variables before declaration is bad 
+  practice and should be avoided.
+
+  Makes const variable actually works.
+
+*/
+
+/*
+_______________________WHY HOISTING_________________________
+
+  Using function before actual declaration.
+
+  Var hoisting is just a byproduct.
+  
+*/
