@@ -46,3 +46,34 @@ const aboutMe = {
   },
 };
 console.log(aboutMe.calcAge());
+
+/*
+
+_______________________The for-of Loop______________________
+
+
+    We can get index in for of loop.
+    we can use continue and break too.
+    
+
+EX-1=> Print all the item from the menu.
+
+    const menu=[...restaurant.starterMenu,...restaurant.mainMenu];
+    for(const i of menu){
+      cl(i);
+    }
+
+
+EX-2=> Print all the item from the menu with indexes.
+
+    for(const [i,el] of menu.entries() ){
+      cl(`${i+1}: ${el}`);
+    }
+
+
+    #- [i,el] => here we have destructed the array in index and elements.
+
+    #- entries() => it gives index and element/values at that index.
+
+    
+*/
