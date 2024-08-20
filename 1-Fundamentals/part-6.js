@@ -51,7 +51,7 @@ __________________Inside Execution Context_______________________
                 
   3- this keyword => Each context gets it.
 
-  #- Execution Context belonging to the arrow function do not get their own arguments keyword
+  #-    Execution Context belonging to the arrow function do not get their own arguments keyword
         nor do they get the "this" keyword i.e. arrow function do not have the "arguments
         object" and the 'this' keyword, insted they use the argument object, and this keyword
         from their colsest regular function parent.
