@@ -29,3 +29,25 @@ console.log("" || "Hello");
 console.log(true || 0);
 console.log(undefined || null); // it will give null because undefined is falsy value,
 // so the last value is returned.
+
+/*    
+
+    2- AND ( && ) => 
+    
+    In short circuiting using AND ( && ) operator, it checks
+    for TRUTHY value, if any operand (value) is falsy then it won't check
+    the other value it just return that false value. 
+
+
+    In AND ( && ) operator, if the first operand (value) is false, then it WON'T
+    check the second value, hence called short-circuiting.
+
+    It will return the LAST value if all are TRUE.
+
+
+
+*/
+
+console.log(0 && "hi");
+console.log(5 && "hi");
+console.log("hi" && 58 && null && "me");
