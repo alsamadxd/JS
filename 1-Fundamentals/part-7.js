@@ -51,3 +51,63 @@ console.log(undefined || null); // it will give null because undefined is falsy 
 console.log(0 && "hi");
 console.log(5 && "hi");
 console.log("hi" && 58 && null && "me");
+
+/*
+
+______________The Nullish Coalescing Operator_______________
+
+    It works on nullish value i.e. ( NULL and UNDEFINED ) means false.
+
+*/
+
+let x = 0;
+console.log(x ?? 7);
+// console.log(y ?? 7); 7 because y is undefined
+
+/*
+
+___Assignment using short circuiting, nullish coalescing operator___
+
+*/
+
+const rest1 = {
+  namee: "Capri",
+  numGuest: 0,
+};
+
+const rest2 = {
+  namee: "la piazza",
+  owner: "Govani",
+};
+
+console.log(rest1);
+console.log(rest2);
+
+// 1- OR
+
+console.log("\n---OR---");
+rest1.numGuest ||= 10;
+rest2.numGuest ||= 10;
+
+// if it is falsy then it will return 10 which is the given value in equation.
+console.log(rest1);
+console.log(rest2);
+
+// 2- NULLISH
+
+console.log("\n---NUllISH---");
+rest1.numGuest ??= 10;
+rest2.numGuest ??= 10;
+
+console.log(rest1);
+console.log(rest2);
+
+// 3- AND
+
+console.log("\n---AND---");
+rest1.owner &&= "<ANONYMOUS>";
+rest1.owner &&= "<ANONYMOUS>";
+
+// To assign a value to a variable which is currently truthy.
+console.log(rest1);
+console.log(rest2);
