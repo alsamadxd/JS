@@ -40,3 +40,23 @@ console.log(l, m, k);
 const [p = 1, q = 1, r = 1] = [5, 6];
 console.log(p, q, r);
 // it will give 5 6 1, bcz of default values.
+
+//
+// 2- Destructuring Objects
+const restautant = {
+  name: "Classic Italiano",
+  openingHours: {
+    thu: {
+      morning: "9am",
+    },
+    fir: {
+      morning: "11am",
+    },
+    sat: {
+      morning: "11am",
+    },
+  },
+};
+
+const { name, openingHours } = restautant;
+console.log(name, openingHours);
