@@ -62,4 +62,4 @@ const add = function (...num) {
 const x = [23, 5, 75, 8];
 add(2, 4);
 add(2, 4, 56);
-add(...x);
+add(...x); //spread operator
