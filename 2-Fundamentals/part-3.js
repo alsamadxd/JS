@@ -36,6 +36,7 @@ console.log(dogName);
 console.log(catName);
 
 // Nested
+
 console.log(adv.cat?.getAge?.ageNow);
 // It first check the cat exists, if yes then it will check
 // for getAge, if it also exists then it will check for
