@@ -28,3 +28,30 @@ const about = function () {
 };
 const aboutMe = { namee, about };
 aboutMe.about();
+
+/*
+
+    #- When defining object methods, it is no longer necessary to use the 
+    funtion keyword.
+    
+*/
+
+// before
+const a1 = {
+  name: "ohio",
+  age: 25,
+  about: function () {
+    console.log("My name is " + this.name + " and age is " + this.age);
+  },
+};
+a1.about();
+
+// After
+const a2 = {
+  name: "neio",
+  age: 19,
+  about() {
+    console.log("My name is " + this.name + " and age is " + this.age);
+  },
+};
+a2.about();
